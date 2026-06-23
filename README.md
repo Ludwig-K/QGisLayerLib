@@ -1,4 +1,4 @@
-# QGis-Plugin LayerLib #
+[# QGis-Plugin LayerLib #
 
 QGis-Python-Plugin to
 - store metadata for map-container-files (*.qgz, *.qgs, *.qlr)
@@ -34,3 +34,4 @@ You can directly contact me via ludwig[at]kni-online.de
 
 ## License ##
 The project is licensed under the GNU GPL 3 license.
+](http://kni-online.de/LayerLib/Release%201.0.0/index.en.html)
