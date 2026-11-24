@@ -1,0 +1,1188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE snippets
+[
+    <!ELEMENT snippets (snippet*)>
+    <!ELEMENT snippet (trans*,snip_info,snip_usages)>
+    <!ELEMENT trans (#PCDATA)>
+    <!ELEMENT snip_info (#PCDATA)>
+    <!ELEMENT snip_usages (#PCDATA)>
+    <!ATTLIST snippet snip_key ID #REQUIRED>
+    <!ATTLIST trans lan CDATA #REQUIRED>
+]>    <snippets>
+        <snippet snip_key="qact_txt_open_plugin_dialog">
+            <trans lan="en"><![CDATA[Open Plugin-Dialog]]></trans>
+            <trans lan="de"><![CDATA[Plugin-Dialog öffnen]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[LayerLib.py #    458]]></snip_usages>
+        </snippet>
+        <snippet snip_key="qact_ttp_open_plugin_dialog">
+            <trans lan="en"><![CDATA[<b>LayerLib</b><br/>Open Plugin-Dialog]]></trans>
+            <trans lan="de"><![CDATA[<b>LayerLib</b><br/>Plugin-Dialog öffnen]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[LayerLib.py #    465]]></snip_usages>
+        </snippet>
+        <snippet snip_key="qtb_toggle_attach_ttp">
+            <trans lan="en"><![CDATA[<b>Toggle attach</b><br/>
+Dock/Undock dialog]]></trans>
+            <trans lan="de"><![CDATA[<b>Toggle attach</b><br/>
+Dialog andocken/loslösen]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/LayerLibDialog.py #    389]]></snip_usages>
+        </snippet>
+        <snippet snip_key="metadata_for_resource_missing">
+            <trans lan="en"><![CDATA[Missing meta-data for layer '{0}']]></trans>
+            <trans lan="de"><![CDATA[Keine Meta-Daten für Layer '{0}']]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[LayerLib.py #   1771
+LayerLib.py #   2722
+dialogs/MyConfirmDialog.py #    175]]></snip_usages>
+        </snippet>
+        <snippet snip_key="qtrv_header_0">
+            <trans lan="en"><![CDATA[Layer-Resources]]></trans>
+            <trans lan="de"><![CDATA[Layer-Resourcen]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[qt/MyQtWidgets.py #    473]]></snip_usages>
+        </snippet>
+        <snippet snip_key="qtrv_header_1">
+            <trans lan="en"><![CDATA[Description]]></trans>
+            <trans lan="de"><![CDATA[Beschreibung]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[qt/MyQtWidgets.py #    488]]></snip_usages>
+        </snippet>
+        <snippet snip_key="qtrv_header_2">
+            <trans lan="en"><![CDATA[Path]]></trans>
+            <trans lan="de"><![CDATA[Pfad]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[qt/MyQtWidgets.py #    495]]></snip_usages>
+        </snippet>
+        <snippet snip_key="ifm_warning_data_source_path_not_found">
+            <trans lan="en"><![CDATA[Resource not stored, path not found:
+{0}]]></trans>
+            <trans lan="de"><![CDATA[Resource nicht gespeichert, Pfad nicht gefunden:
+{0}]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/EditResourceDialog.py #    378
+dialogs/AddResourceDialog.py #    588
+tools/MyTools.py #   3155]]></snip_usages>
+        </snippet>
+        <snippet snip_key="layer_file_not_registered">
+            <trans lan="en"><![CDATA[Layer '{0}' could not be loaded, path to container-file not registered]]></trans>
+            <trans lan="de"><![CDATA[Layer '{0}' konnte nicht geladen werden, Pfad zur Container-Datei nicht registriert]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[LayerLib.py #   2717]]></snip_usages>
+        </snippet>
+        <snippet snip_key="qtb_toggle_tool_mode_ttp">
+            <trans lan="en"><![CDATA[<b>Toggle Edit-Mode</b><br/>
+enable Drag&Drop editing of TreeView-Structure]]></trans>
+            <trans lan="de"><![CDATA[<b>Editier-Modus schalten</b><br/>
+ermöglicht die Drag&Drop Bearbeitung der Baumstruktur]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[LayerLib.py #    676]]></snip_usages>
+        </snippet>
+        <snippet snip_key="qtb_refresh_ttp">
+            <trans lan="en"><![CDATA[<b>Refresh</b><br>
+Reread settings/layers and refresh dialog]]></trans>
+            <trans lan="de"><![CDATA[<b>Refresh</b><br>
+Settings/Layer neu einlesen und Dialog aktualisieren]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[LayerLib.py #    703]]></snip_usages>
+        </snippet>
+        <snippet snip_key="qtb_show_help_ttp">
+            <trans lan="en"><![CDATA[<b>Show help</b><br>
+Opens webbrowser for internet-documentation]]></trans>
+            <trans lan="de"><![CDATA[<b>Hilfe anzeigen</b><br>
+öffnet Browser-Fenster für Internet-Dokumentation]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/LayerLibDialog.py #    379]]></snip_usages>
+        </snippet>
+        <snippet snip_key="treeview_source_path_qle_ttp">
+            <trans lan="en"><![CDATA[<b>Path to Treeview-XML-File</b><br>
+Includes tree-structure and metadata for Layer-Library]]></trans>
+            <trans lan="de"><![CDATA[<b>Pfad zur Treeview-XML-Datei</b><br>
+Beinhaltet Baumstruktur und Metadaten der Layer-Library]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/LayerLibDialog.py #    177]]></snip_usages>
+        </snippet>
+        <snippet snip_key="settings_tab_lbl">
+            <trans lan="en"><![CDATA[Settings]]></trans>
+            <trans lan="de"><![CDATA[Einstellungen]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/LayerLibDialog.py #    332]]></snip_usages>
+        </snippet>
+        <snippet snip_key="lib_tab_lbl">
+            <trans lan="en"><![CDATA[Contents]]></trans>
+            <trans lan="de"><![CDATA[Inhalte]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/LayerLibDialog.py #    157]]></snip_usages>
+        </snippet>
+        <snippet snip_key="inspect_tab_lbl">
+            <trans lan="en"><![CDATA[Inspect]]></trans>
+            <trans lan="de"><![CDATA[Inspect]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/LayerLibDialog.py #    367]]></snip_usages>
+        </snippet>
+        <snippet snip_key="treeview_source_path_lbl">
+            <trans lan="en"><![CDATA[TreeView-XML-File]]></trans>
+            <trans lan="de"><![CDATA[TreeView-XML-Datei]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/LayerLibDialog.py #    171]]></snip_usages>
+        </snippet>
+        <snippet snip_key="qpb_start_search_ttp">
+            <trans lan="en"><![CDATA[Find Folder/Layer...]]></trans>
+            <trans lan="de"><![CDATA[Suche ausführen]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/LayerLibDialog.py #    146]]></snip_usages>
+        </snippet>
+        <snippet snip_key="ifm_info_no_search_value">
+            <trans lan="en"><![CDATA[Please enter search-value]]></trans>
+            <trans lan="de"><![CDATA[Bitte Suchbegriff eingeben]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[LayerLib.py #   1570]]></snip_usages>
+        </snippet>
+        <snippet snip_key="qpb_expand_all_ttp">
+            <trans lan="en"><![CDATA[Expand all]]></trans>
+            <trans lan="de"><![CDATA[Alles öffnen]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/LayerLibDialog.py #    126]]></snip_usages>
+        </snippet>
+        <snippet snip_key="qpb_collapse_all_ttp">
+            <trans lan="en"><![CDATA[Collapse all]]></trans>
+            <trans lan="de"><![CDATA[Alles schließen]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/LayerLibDialog.py #    134]]></snip_usages>
+        </snippet>
+        <snippet snip_key="qle_search_pht">
+            <trans lan="en"><![CDATA[Enter search-string...]]></trans>
+            <trans lan="de"><![CDATA[Suchbegriff eingeben...]]></trans>
+            <snip_info><![CDATA[Platzhalter-Text für das Sucheingabefeld]]></snip_info>
+            <snip_usages><![CDATA[dialogs/LayerLibDialog.py #    139]]></snip_usages>
+        </snippet>
+        <snippet snip_key="ifm_success_sub_layer_added">
+            <trans lan="en"><![CDATA[Sub-Layer '{0}' loaded to project]]></trans>
+            <trans lan="de"><![CDATA[Sub-Layer '{0}' zu Projekt hinzugefügt]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[LayerLib.py #   2414]]></snip_usages>
+        </snippet>
+        <snippet snip_key="add_layer_visibility_qcbx_txt">
+            <trans lan="en"><![CDATA[Visibility of added layers]]></trans>
+            <trans lan="de"><![CDATA[Sichtbarkeit hinzugefügter Layer]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/LayerLibDialog.py #    195]]></snip_usages>
+        </snippet>
+        <snippet snip_key="add_layer_visibility_qcbx_ttp">
+            <trans lan="en"><![CDATA[<b>Layer-Visibility</b><br>
+Default-visibility of inserted layers]]></trans>
+            <trans lan="de"><![CDATA[<b>Layer-Sichtbarkeit</b><br>
+Standard-Sichbarkeit hinzugefügter Layer]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/LayerLibDialog.py #    199]]></snip_usages>
+        </snippet>
+        <snippet snip_key="allways_hidden_opt">
+            <trans lan="en"><![CDATA[hidden]]></trans>
+            <trans lan="de"><![CDATA[nicht sichtbar]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/LayerLibDialog.py #    202]]></snip_usages>
+        </snippet>
+        <snippet snip_key="allways_visible_opt">
+            <trans lan="en"><![CDATA[visible]]></trans>
+            <trans lan="de"><![CDATA[sichtbar]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/LayerLibDialog.py #    205]]></snip_usages>
+        </snippet>
+        <snippet snip_key="qact_show_help_txt">
+            <trans lan="en"><![CDATA[Show help]]></trans>
+            <trans lan="de"><![CDATA[Hilfe anzeigen]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[LayerLib.py #    472]]></snip_usages>
+        </snippet>
+        <snippet snip_key="qact_show_help_ttp">
+            <trans lan="en"><![CDATA[<b>Show help</b><br>
+Opens webbrowser for internet-documentation]]></trans>
+            <trans lan="de"><![CDATA[<b>Hilfe anzeigen</b><br>
+öffnet Browser-Fenster für Internet-Dokumentation]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[LayerLib.py #    479]]></snip_usages>
+        </snippet>
+        <snippet snip_key="qtb_new_folder_ttp">
+            <trans lan="en"><![CDATA[<b>New folder</b><br>
+Create new sub-folder]]></trans>
+            <trans lan="de"><![CDATA[<b>Neuer Ordner</b><br>
+Neuen Unterordner anlegen]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[LayerLib.py #    685]]></snip_usages>
+        </snippet>
+        <snippet snip_key="qtb_add_resource_ttp">
+            <trans lan="en"><![CDATA[<b>Add Resoure</b><br>
+Add resource from file-system, layer-panel or browser-panel to library]]></trans>
+            <trans lan="de"><![CDATA[<b>Resource hinzufügen</b><br>
+Layer aus Dateisystem, Layer-Panel oder Browser-Panel zur Library hinzufügen]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[LayerLib.py #    693]]></snip_usages>
+        </snippet>
+        <snippet snip_key="settings_complete_msg">
+            <trans lan="en"><![CDATA[Settings loaded...
+ini: {0}
+library: {1}]]></trans>
+            <trans lan="de"><![CDATA[Settings loaded...
+ini: {0}
+library: {1}]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[LayerLib.py #    572
+LayerLib.py #    639]]></snip_usages>
+        </snippet>
+        <snippet snip_key="label_attribute_missing">
+            <trans lan="en"><![CDATA[Label-Attribute missing...]]></trans>
+            <trans lan="de"><![CDATA[Label-Attribut fehlt...]]></trans>
+            <snip_info><![CDATA[Verwendet in FolderDialog und Layer-Dialog, falls keine gültige ID eingetragen wurde]]></snip_info>
+            <snip_usages><![CDATA[dialogs/EditResourceDialog.py #    386
+dialogs/AddResourceDialog.py #    596]]></snip_usages>
+        </snippet>
+        <snippet snip_key="dlg_create_treeview_xml_file_title">
+            <trans lan="en"><![CDATA[LayerLib: Create or select Treeview-XML-File]]></trans>
+            <trans lan="de"><![CDATA[LayerLib: Treeview-XML-Datei anlegen oder auswählen]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[tools/MyTools.py #   1634]]></snip_usages>
+        </snippet>
+        <snippet snip_key="update_resource_qpb">
+            <trans lan="en"><![CDATA[Save Edits]]></trans>
+            <trans lan="de"><![CDATA[Änderungen speichern]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/EditResourceDialog.py #    196]]></snip_usages>
+        </snippet>
+        <snippet snip_key="insert_resource_qpb">
+            <trans lan="en"><![CDATA[Add Resource...]]></trans>
+            <trans lan="de"><![CDATA[Resource hinzufügen...]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/AddResourceDialog.py #    181]]></snip_usages>
+        </snippet>
+        <snippet snip_key="first_use_dlg_title">
+            <trans lan="en"><![CDATA[LayerLib first use...]]></trans>
+            <trans lan="de"><![CDATA[LayerLib Erstverwendung...]]></trans>
+            <snip_info><![CDATA[Aufruf bei Erstverwendung, wenn nich keine ini-Datei vorhanden ist]]></snip_info>
+            <snip_usages><![CDATA[LayerLib.py #    626]]></snip_usages>
+        </snippet>
+        <snippet snip_key="first_use_dlg_msg">
+            <trans lan="en"><![CDATA[First use of plugin?
+
+Please create or register XML file to store your Layer-Library...]]></trans>
+            <trans lan="de"><![CDATA[Plugin Erstverwendung?
+
+Bitte XML-Datei zur Speicherung Ihrer Layer-Library anlegen oder registrieren...]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[LayerLib.py #    627]]></snip_usages>
+        </snippet>
+        <snippet snip_key="select_resource_path_qpb_ttp">
+            <trans lan="en"><![CDATA[Select Resource-File]]></trans>
+            <trans lan="de"><![CDATA[Resource-Datei auswählen]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/EditResourceDialog.py #    154
+dialogs/AddResourceDialog.py #    137]]></snip_usages>
+        </snippet>
+        <snippet snip_key="select_treeview_xml_file_qpb_ttp">
+            <trans lan="en"><![CDATA[Create new or select existing XML-File to store Layer-Library]]></trans>
+            <trans lan="de"><![CDATA[XML-Datei zur Speicherung  der Layer-Library anlegen oder vorhandene selektieren]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/LayerLibDialog.py #    188]]></snip_usages>
+        </snippet>
+        <snippet snip_key="treeview_dom_doc_invalid">
+            <trans lan="en"><![CDATA[TreeView-Source-File '{0}' invalid:
+{1}]]></trans>
+            <trans lan="de"><![CDATA[TreeView-Source-File '{0}' invalid:
+{1}]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[LayerLib.py #    551]]></snip_usages>
+        </snippet>
+        <snippet snip_key="layer_id_qlbl_ttp">
+            <trans lan="en"><![CDATA[Layer ID (may be altered to valid and unique XML-identifier)]]></trans>
+            <trans lan="de"><![CDATA[Layer ID (bei Bedarf zu validem eindeutigem XML-Identifier abgeändert)]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/EditResourceDialog.py #    160]]></snip_usages>
+        </snippet>
+        <snippet snip_key="folder_id_fqle_ttp">
+            <trans lan="en"><![CDATA[Folder-ID, unique and valid as XML-ID-attribute, may be altered]]></trans>
+            <trans lan="de"><![CDATA[Ordner-ID, eindeutig und zulässig als XML-ID-Attribut, möglicherweise geändert]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/EditFolderDialog.py #    103
+dialogs/AddFolderDialog.py #    109]]></snip_usages>
+        </snippet>
+        <snippet snip_key="root_folder_not_deletable">
+            <trans lan="en"><![CDATA[Root-Folder == Document-Element in TreeView-XML-File => folder not deletable ]]></trans>
+            <trans lan="de"><![CDATA[Root-Ordner == Document-Element in TreeView-XML-Datei => Ordner kann nicht gelöscht werden]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[LayerLib.py #   1823
+dialogs/MyConfirmDialog.py #    149]]></snip_usages>
+        </snippet>
+        <snippet snip_key="AddResourceDialog_header">
+            <trans lan="en"><![CDATA[Add Resource:]]></trans>
+            <trans lan="de"><![CDATA[Resource hinzufügen:]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/AddResourceDialog.py #    108]]></snip_usages>
+        </snippet>
+        <snippet snip_key="AddFolderDialog_header">
+            <trans lan="en"><![CDATA[Create Folder]]></trans>
+            <trans lan="de"><![CDATA[Ordner anlegen]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/AddFolderDialog.py #     89]]></snip_usages>
+        </snippet>
+        <snippet snip_key="EditFolderDialog_header">
+            <trans lan="en"><![CDATA[Update Folder]]></trans>
+            <trans lan="de"><![CDATA[Ordner bearbeiten]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/EditFolderDialog.py #     88]]></snip_usages>
+        </snippet>
+        <snippet snip_key="EditResourceDialog_header">
+            <trans lan="en"><![CDATA[Edit Resource]]></trans>
+            <trans lan="de"><![CDATA[Resource bearbeiten]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/EditResourceDialog.py #    119]]></snip_usages>
+        </snippet>
+        <snippet snip_key="ifm_warning_multiple_files_dropped">
+            <trans lan="en"><![CDATA[Only single files accepted]]></trans>
+            <trans lan="de"><![CDATA[Nur Einzeldateien zulässig]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/EditResourceDialog.py #    592
+dialogs/EditResourceDialog.py #    674
+dialogs/AddResourceDialog.py #    332
+dialogs/AddResourceDialog.py #    415]]></snip_usages>
+        </snippet>
+        <snippet snip_key="error_opening_file">
+            <trans lan="en"><![CDATA[Error opening file '{0}': {1}]]></trans>
+            <trans lan="de"><![CDATA[Fehler beim öffnen der Datei '{0}': {1}]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[LayerLib.py #   2301]]></snip_usages>
+        </snippet>
+        <snippet snip_key="file_suffix_not_supported">
+            <trans lan="en"><![CDATA[File-Suffix '{0}' not supported]]></trans>
+            <trans lan="de"><![CDATA[Datei-Erweiterung '{0}' nicht unterstützt]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[LayerLib.py #   2102
+LayerLib.py #   2153
+LayerLib.py #   2575
+LayerLib.py #   2610
+LayerLib.py #   2700
+dialogs/EditResourceDialog.py #    393
+dialogs/EditResourceDialog.py #    574
+dialogs/EditResourceDialog.py #    662
+dialogs/AddResourceDialog.py #    314
+dialogs/AddResourceDialog.py #    403
+dialogs/AddResourceDialog.py #    602
+dialogs/DataSourcesDialog.py #    488]]></snip_usages>
+        </snippet>
+        <snippet snip_key="error_opening_vector_file">
+            <trans lan="en"><![CDATA[Error opening Vector-Layer-File '{0}': {1}]]></trans>
+            <trans lan="de"><![CDATA[Fehler beim öffnen der Vector-Layer-Datei '{0}': {1}]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[LayerLib.py #   2144
+LayerLib.py #   2566
+dialogs/SelectSubLayerDialog.py #    265]]></snip_usages>
+        </snippet>
+        <snippet snip_key="error_opening_raster_file">
+            <trans lan="en"><![CDATA[Error opening Raster-Layer-File '{0}': {1}]]></trans>
+            <trans lan="de"><![CDATA[Fehler beim öffnen der Raster-Layer-Datei '{0}': {1}]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[LayerLib.py #   2093
+LayerLib.py #   2691]]></snip_usages>
+        </snippet>
+        <snippet snip_key="only_local_files_supported">
+            <trans lan="en"><![CDATA[Only local files supported]]></trans>
+            <trans lan="de"><![CDATA[Nur lokale Dateien zulässig]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/EditResourceDialog.py #    587
+dialogs/AddResourceDialog.py #    327]]></snip_usages>
+        </snippet>
+        <snippet snip_key="no_layers_found_in_file">
+            <trans lan="en"><![CDATA[No layers in '{0}'...]]></trans>
+            <trans lan="de"><![CDATA[Keine Layer in '{0}'...]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[LayerLib.py #   2556
+LayerLib.py #   2670
+dialogs/EditResourceDialog.py #    282
+dialogs/AddResourceDialog.py #    270]]></snip_usages>
+        </snippet>
+        <snippet snip_key="export_project_layer_to_qlr_title">
+            <trans lan="en"><![CDATA[Save Project-Layer/Layer-Group as Layer-Definition-File (*.qlr)]]></trans>
+            <trans lan="de"><![CDATA[Project-Layer/Layer-Gruppe als Layer-Definitions-Datei speichern (*.qlr)]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[LayerLib.py #   2244
+dialogs/EditResourceDialog.py #    838
+dialogs/AddResourceDialog.py #    767]]></snip_usages>
+        </snippet>
+        <snippet snip_key="inspect_layer_drop_area_html">
+            <trans lan="en"><![CDATA[<div style='white-space: nowrap; '>
+Drag&Drop...<br>
+- raster/vector-layer from file-system or QGis-Browser-Panel,<br>
+- Container-Files (*.qgs/*.qgz/*.qlr) from file-system or QGis-Browser-Panel,<br>
+- layer/layer-group from QGis-Layers-Panel<br>
+...to<br>
+- show metadata/contents,<br>
+- add layers to project or<br>
+- export layers/layer-groups as Layer-Definition-File (*.qlr)
+</div>]]></trans>
+            <trans lan="de"><![CDATA[<div style='white-space: nowrap; '>
+Drag&Drop...<br>
+- Vektor- oder Raster-Layer aus Dateisystem/QGis-Browser-Panel,<br>
+- Container-Datei (*.qgs/*.qgz/*.qlr) aus Dateisystem/QGis-Browser-Panel,<br>
+- Layer/Layer-Gruppe aus QGis-Layers-Panel<br>
+...um<br>
+- Metadaten und Inhalte anzuzeigen<br>
+- Layer zum Projekt hinzuzufügen oder<br>
+- Layer/Layer-Gruppen als Layer-Definitions-Datei (*.qlr) zu exportieren
+</div>]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/LayerLibDialog.py #    344
+dialogs/LayerLibDialog.py #    348]]></snip_usages>
+        </snippet>
+        <snippet snip_key="mime_data_not_accepted">
+            <trans lan="en"><![CDATA[Drag&Drop: Mime-Data not accepted]]></trans>
+            <trans lan="de"><![CDATA[Drag&Drop: Mime-Data nicht zulässig]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[LayerLib.py #   1475
+dialogs/LayerLibDialog.py #    433
+dialogs/LayerLibDialog.py #    488
+dialogs/EditResourceDialog.py #    678
+dialogs/EditResourceDialog.py #    757
+dialogs/AddResourceDialog.py #    419
+dialogs/AddResourceDialog.py #    490]]></snip_usages>
+        </snippet>
+        <snippet snip_key="success_resource_updated">
+            <trans lan="en"><![CDATA[Resource '{0}' updated]]></trans>
+            <trans lan="de"><![CDATA[Resource '{0}' aktualisiert]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/EditResourceDialog.py #    357]]></snip_usages>
+        </snippet>
+        <snippet snip_key="folder_not_found">
+            <trans lan="en"><![CDATA[Folder '{0}' not found...]]></trans>
+            <trans lan="de"><![CDATA[Ordner '{0}' nicht gefunden...]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[LayerLib.py #   1814
+dialogs/EditFolderDialog.py #    180
+dialogs/MyConfirmDialog.py #    144]]></snip_usages>
+        </snippet>
+        <snippet snip_key="qpb_detect_invalid_paths_txt">
+            <trans lan="en"><![CDATA[Detect invalid paths:]]></trans>
+            <trans lan="de"><![CDATA[Ungültige Pfade suchen:]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/LayerLibDialog.py #    261]]></snip_usages>
+        </snippet>
+        <snippet snip_key="qle_search_path_ph_txt">
+            <trans lan="en"><![CDATA[Search-value...]]></trans>
+            <trans lan="de"><![CDATA[Search-value...]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/LayerLibDialog.py #    224]]></snip_usages>
+        </snippet>
+        <snippet snip_key="qle_replace_path_ph_txt">
+            <trans lan="en"><![CDATA[Replace-value...]]></trans>
+            <trans lan="de"><![CDATA[Replace-value...]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/LayerLibDialog.py #    244]]></snip_usages>
+        </snippet>
+        <snippet snip_key="qgb_settings_title">
+            <trans lan="en"><![CDATA[Settings]]></trans>
+            <trans lan="de"><![CDATA[Einstellungen]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/LayerLibDialog.py #    165]]></snip_usages>
+        </snippet>
+        <snippet snip_key="qgb_tools_title">
+            <trans lan="en"><![CDATA[Tools]]></trans>
+            <trans lan="de"><![CDATA[Tools]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/LayerLibDialog.py #    212]]></snip_usages>
+        </snippet>
+        <snippet snip_key="qpb_detect_invalid_paths_ttp">
+            <trans lan="en"><![CDATA[<div style='white-space: nowrap; '>
+Search for LayerLib-resources with invalid paths<br>
+Result will be selected in TreeView
+</div>]]></trans>
+            <trans lan="de"><![CDATA[<div style='white-space: nowrap; '>
+LayerLib-Resourcen mit ungültigen Pfaden suchen<br>
+Ergebnis wird im TreeView selektiert
+</div>]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/LayerLibDialog.py #    267]]></snip_usages>
+        </snippet>
+        <snippet snip_key="qpb_replace_in_paths_ttp">
+            <trans lan="en"><![CDATA[Replace in path-attributes of LayerLib-resources]]></trans>
+            <trans lan="de"><![CDATA[Ersetzen in den Pfad-Attributen der LayerLib-Resourcen]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/LayerLibDialog.py #    254]]></snip_usages>
+        </snippet>
+        <snippet snip_key="qpb_search_in_paths_ttp">
+            <trans lan="en"><![CDATA[Search in path-attributes of LayerLib-Resources<br>
+case-sensitive]]></trans>
+            <trans lan="de"><![CDATA[Im Pfad-Attribut der LayerLib-Resourcen suchen<br>
+case-sensitive]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/LayerLibDialog.py #    233]]></snip_usages>
+        </snippet>
+        <snippet snip_key="folder_lbl_qlbl_ttp">
+            <trans lan="en"><![CDATA[Folder Label as displayed in TreeView]]></trans>
+            <trans lan="de"><![CDATA[Ordner-Bezeichnung für die Darstellung im TreeView]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/EditFolderDialog.py #    110
+dialogs/AddFolderDialog.py #    116]]></snip_usages>
+        </snippet>
+        <snippet snip_key="folder_description_qpte_ttp">
+            <trans lan="en"><![CDATA[Optional description of folder/contents]]></trans>
+            <trans lan="de"><![CDATA[Optionale Beschreibung des Ordners/der Inhalte]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/EditFolderDialog.py #    118
+dialogs/AddFolderDialog.py #    125]]></snip_usages>
+        </snippet>
+        <snippet snip_key="qpb_detect_invalid_container_paths_ttp">
+            <trans lan="en"><![CDATA[<div style='white-space: nowrap; '>
+Scan LayerLib-container-files (*.qgs/*.qgz/*.qlr) for invalid datasource-paths<br>
+Result will be selected in TreeView<br>
+Paths can be altered in Layer-Metadata-Dialog (Link "Edit Datasource")
+</div>]]></trans>
+            <trans lan="de"><![CDATA[<div style='white-space: nowrap; '>
+Suche ungültige Pfade in LayerLib-Container-Dateien (*.qgs/*.qgz/*.qlr)<br>
+Ergebnis wird im TreeView selektiert<br>
+Pfade können im Layer-Metadaten-Dialog angepasst werden (Link "Edit Datasource")
+</div>]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/LayerLibDialog.py #    277]]></snip_usages>
+        </snippet>
+        <snippet snip_key="qpb_detect_invalid_container_paths_txt">
+            <trans lan="en"><![CDATA[Detect invalid paths in container-files (*.qgs/*.qgz/*.qlr):]]></trans>
+            <trans lan="de"><![CDATA[Ungültige Pfade in Containerdateien (*.qgs/*.qgz/*.qlr) suchen:
+]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/LayerLibDialog.py #    274]]></snip_usages>
+        </snippet>
+        <snippet snip_key="error_parsing_container_file">
+            <trans lan="en"><![CDATA[Error parsing container-file '{0}':
+{1}]]></trans>
+            <trans lan="de"><![CDATA[Fehler beim Parsen der Container-Datei '{0}':
+{1}]]></trans>
+            <snip_info><![CDATA[params: file-path and exception]]></snip_info>
+            <snip_usages><![CDATA[LayerLib.py #   2604
+dialogs/EditResourceDialog.py #    498
+dialogs/DataSourcesDialog.py #    480]]></snip_usages>
+        </snippet>
+        <snippet snip_key="file_not_found">
+            <trans lan="en"><![CDATA[File '{0}' not found...]]></trans>
+            <trans lan="de"><![CDATA[Datei '{0}' nicht gefunden...]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[LayerLib.py #   2582
+LayerLib.py #   2617
+LayerLib.py #   2709
+dialogs/EditResourceDialog.py #    503
+dialogs/EditResourceDialog.py #    582
+dialogs/AddResourceDialog.py #    322]]></snip_usages>
+        </snippet>
+        <snippet snip_key="dlg_select_new_layer_file_title">
+            <trans lan="en"><![CDATA[Select file for resource]]></trans>
+            <trans lan="de"><![CDATA[Datei für Resource auswählen]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/AddResourceDialog.py #    251]]></snip_usages>
+        </snippet>
+        <snippet snip_key="dlg_replace_data_source_file_title">
+            <trans lan="en"><![CDATA[Replace datasource-file for '{0}']]></trans>
+            <trans lan="de"><![CDATA[Datasource-Datei ersetzen für '{0}']]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/EditResourceDialog.py #    267
+dialogs/DataSourcesDialog.py #    810]]></snip_usages>
+        </snippet>
+        <snippet snip_key="dlg_confirm_replace_in_paths_title">
+            <trans lan="en"><![CDATA[Find&Replace in path]]></trans>
+            <trans lan="de"><![CDATA[Find&Replace in Pfaden]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[LayerLib.py #    868]]></snip_usages>
+        </snippet>
+        <snippet snip_key="dlg_confirm_replace_in_paths_text">
+            <trans lan="en"><![CDATA['{0}' found in {1} resources<br>
+Replace with '{2}'?]]></trans>
+            <trans lan="de"><![CDATA['{0}' in {1} Resourcen gefunden<br>
+Ersetzen durch '{2}'? ]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[LayerLib.py #    870]]></snip_usages>
+        </snippet>
+        <snippet snip_key="layer_removed_from_library">
+            <trans lan="en"><![CDATA[Resource '{0}' removed from library]]></trans>
+            <trans lan="de"><![CDATA[Resource '{0}' aus Library entfernt]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[LayerLib.py #   1761]]></snip_usages>
+        </snippet>
+        <snippet snip_key="folder_removed_from_library">
+            <trans lan="en"><![CDATA[Folder '{0}' removed from library]]></trans>
+            <trans lan="de"><![CDATA[Ordner '{0}' aus Library entfernt]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[LayerLib.py #   1812]]></snip_usages>
+        </snippet>
+        <snippet snip_key="qle_search_txt">
+            <trans lan="en"><![CDATA[Search in paths:]]></trans>
+            <trans lan="de"><![CDATA[Suchen in Pfaden:]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/LayerLibDialog.py #    219]]></snip_usages>
+        </snippet>
+        <snippet snip_key="qle_replace_txt">
+            <trans lan="en"><![CDATA[Replace in paths:]]></trans>
+            <trans lan="de"><![CDATA[Ersetzen in Pfaden:]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/LayerLibDialog.py #    240]]></snip_usages>
+        </snippet>
+        <snippet snip_key="ifm_warning_layer_not_added">
+            <trans lan="en"><![CDATA[Layer '{0}' could not be inserted]]></trans>
+            <trans lan="de"><![CDATA[Layer '{0}' konnte nicht hinzugefügt werden]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[LayerLib.py #   2517
+LayerLib.py #   2524]]></snip_usages>
+        </snippet>
+        <snippet snip_key="resource_path_fqle_ttp">
+            <trans lan="en"><![CDATA[Path to container-file (*.qgz/*.qgs/*.qlr)]]></trans>
+            <trans lan="de"><![CDATA[Pfad zur Container-Datei (*.qgz/*.qgs/*.qlr)]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/EditResourceDialog.py #    145
+dialogs/AddResourceDialog.py #    128]]></snip_usages>
+        </snippet>
+        <snippet snip_key="success_resource_stored_msg">
+            <trans lan="en"><![CDATA[Resource '{0}' saved in library]]></trans>
+            <trans lan="de"><![CDATA[Resource '{0}' in Library gesichert]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/AddResourceDialog.py #    573]]></snip_usages>
+        </snippet>
+        <snippet snip_key="no_parsed_resources_found">
+            <trans lan="en"><![CDATA[No storable resources found]]></trans>
+            <trans lan="de"><![CDATA[Keine speicherbaren Resourcen gefunden]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/EditResourceDialog.py #    492
+dialogs/EditResourceDialog.py #    745
+dialogs/AddResourceDialog.py #    478]]></snip_usages>
+        </snippet>
+        <snippet snip_key="success_folder_created_msg">
+            <trans lan="en"><![CDATA[Folder '{0}' created]]></trans>
+            <trans lan="de"><![CDATA[Ordner '{0}' angelegt]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/AddFolderDialog.py #    211]]></snip_usages>
+        </snippet>
+        <snippet snip_key="update_container_file_qpb_txt">
+            <trans lan="en"><![CDATA[Save container-file]]></trans>
+            <trans lan="de"><![CDATA[Container-Datei speichern]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/DataSourcesDialog.py #    233]]></snip_usages>
+        </snippet>
+        <snippet snip_key="container_file_not_found">
+            <trans lan="en"><![CDATA[Container-file not found '{0}']]></trans>
+            <trans lan="de"><![CDATA[Container-Datei nicht gefunden '{0}']]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/DataSourcesDialog.py #    495]]></snip_usages>
+        </snippet>
+        <snippet snip_key="SelectSubLayerDialog_container_header">
+            <trans lan="en"><![CDATA[<b>Select Sub-Layer</b><br>
+Container-File: '{0}']]></trans>
+            <trans lan="de"><![CDATA[<b>Auswahl Sub-Layer</b><br>
+Container-Datei : '{0}']]></trans>
+            <snip_info><![CDATA[Select ]]></snip_info>
+            <snip_usages><![CDATA[dialogs/SelectSubLayerDialog.py #    162
+dialogs/SelectSubLayerDialog.py #    175]]></snip_usages>
+        </snippet>
+        <snippet snip_key="EditResourceDialog_title">
+            <trans lan="en"><![CDATA[LayerLib: Edit Resource]]></trans>
+            <trans lan="de"><![CDATA[LayerLib: Resource bearbeiten]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/EditResourceDialog.py #    113]]></snip_usages>
+        </snippet>
+        <snippet snip_key="SelectProjectionDialog_title">
+            <trans lan="en"><![CDATA[Show extent: select projection]]></trans>
+            <trans lan="de"><![CDATA[Show extent: Projektion auswählen]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[LayerLib.py #   2021]]></snip_usages>
+        </snippet>
+        <snippet snip_key="AddFolderDialog_title">
+            <trans lan="en"><![CDATA[LayerLib: Create Folder]]></trans>
+            <trans lan="de"><![CDATA[LayerLib: Ordner anlegen]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/AddFolderDialog.py #     84]]></snip_usages>
+        </snippet>
+        <snippet snip_key="AddResourceDialog_title">
+            <trans lan="en"><![CDATA[LayerLib: Add Resource]]></trans>
+            <trans lan="de"><![CDATA[LayerLib: Resource hinzufügen]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/AddResourceDialog.py #    103]]></snip_usages>
+        </snippet>
+        <snippet snip_key="DataSourcesDialog_title">
+            <trans lan="en"><![CDATA[LayerLib: Datasources in Container-FIle]]></trans>
+            <trans lan="de"><![CDATA[LayerLib: Datenquellen in Container-Datei]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/DataSourcesDialog.py #    146]]></snip_usages>
+        </snippet>
+        <snippet snip_key="EditFolderDialog_title">
+            <trans lan="en"><![CDATA[LayerLib: Edit Folder]]></trans>
+            <trans lan="de"><![CDATA[LayerLib: Ordner bearbeiten]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/EditFolderDialog.py #     83]]></snip_usages>
+        </snippet>
+        <snippet snip_key="LayerLibDialog_title">
+            <trans lan="en"><![CDATA[LayerLib]]></trans>
+            <trans lan="de"><![CDATA[LayerLib]]></trans>
+            <snip_info><![CDATA[Titel des Hauptdialogs]]></snip_info>
+            <snip_usages><![CDATA[dialogs/LayerLibDialog.py #     88]]></snip_usages>
+        </snippet>
+        <snippet snip_key="SelectSubLayerDialog_title">
+            <trans lan="en"><![CDATA[LayerLib: Sub-Layer]]></trans>
+            <trans lan="de"><![CDATA[LayerLib: Sub-Layer]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/SelectSubLayerDialog.py #     75]]></snip_usages>
+        </snippet>
+        <snippet snip_key="MyConfirmDialog_title">
+            <trans lan="en"><![CDATA[LayerLib: confirm delete]]></trans>
+            <trans lan="de"><![CDATA[LayerLib: Löschen bestätigen]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/MyConfirmDialog.py #     77]]></snip_usages>
+        </snippet>
+        <snippet snip_key="MyConfirmDialog_header">
+            <trans lan="en"><![CDATA[Delete selected Resource/Folder?]]></trans>
+            <trans lan="de"><![CDATA[Resource/Ordner löschen?]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/MyConfirmDialog.py #     84]]></snip_usages>
+        </snippet>
+        <snippet snip_key="ifm_warning_layer_not_created">
+            <trans lan="en"><![CDATA[Error creating Layer '{0}']]></trans>
+            <trans lan="de"><![CDATA[Error creating Layer '{0}']]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[LayerLib.py #   2041
+LayerLib.py #   2135
+LayerLib.py #   2196
+LayerLib.py #   2606
+LayerLib.py #   2657]]></snip_usages>
+        </snippet>
+        <snippet snip_key="folder_description_qlbl">
+            <trans lan="en"><![CDATA[Description]]></trans>
+            <trans lan="de"><![CDATA[Beschreibung]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/EditFolderDialog.py #    114
+dialogs/AddFolderDialog.py #    120]]></snip_usages>
+        </snippet>
+        <snippet snip_key="folder_label_qlbl">
+            <trans lan="en"><![CDATA[Label]]></trans>
+            <trans lan="de"><![CDATA[Bezeichnung]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/EditFolderDialog.py #    107
+dialogs/AddFolderDialog.py #    113]]></snip_usages>
+        </snippet>
+        <snippet snip_key="parent_folder_qlbl">
+            <trans lan="en"><![CDATA[Parent-Folder]]></trans>
+            <trans lan="de"><![CDATA[Eltern-Ordner]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/EditFolderDialog.py #    123
+dialogs/AddFolderDialog.py #    129]]></snip_usages>
+        </snippet>
+        <snippet snip_key="create_folder_qpb">
+            <trans lan="en"><![CDATA[Create Folder]]></trans>
+            <trans lan="de"><![CDATA[Ordner anlegen]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/AddFolderDialog.py #    139]]></snip_usages>
+        </snippet>
+        <snippet snip_key="update_folder_qpb">
+            <trans lan="en"><![CDATA[Update Folder]]></trans>
+            <trans lan="de"><![CDATA[Metadaten speichern]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/EditFolderDialog.py #    132]]></snip_usages>
+        </snippet>
+        <snippet snip_key="file_path_fqle">
+            <trans lan="en"><![CDATA[Path]]></trans>
+            <trans lan="de"><![CDATA[Pfad]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/EditResourceDialog.py #    136
+dialogs/AddResourceDialog.py #    126]]></snip_usages>
+        </snippet>
+        <snippet snip_key="ed_sub_layer_qlbl_txt">
+            <trans lan="en"><![CDATA[Sub-Layer]]></trans>
+            <trans lan="de"><![CDATA[Sub-Layer]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/DataSourcesDialog.py #    292]]></snip_usages>
+        </snippet>
+        <snippet snip_key="resource_label_fqle">
+            <trans lan="en"><![CDATA[Label]]></trans>
+            <trans lan="de"><![CDATA[Bezeichnung]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/EditResourceDialog.py #    164]]></snip_usages>
+        </snippet>
+        <snippet snip_key="resource_description_qpte">
+            <trans lan="en"><![CDATA[Description]]></trans>
+            <trans lan="de"><![CDATA[Beschreibung]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/EditResourceDialog.py #    170]]></snip_usages>
+        </snippet>
+        <snippet snip_key="folder_qcbx">
+            <trans lan="en"><![CDATA[Folder]]></trans>
+            <trans lan="de"><![CDATA[Ordner]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/EditResourceDialog.py #    177
+dialogs/AddResourceDialog.py #    160]]></snip_usages>
+        </snippet>
+        <snippet snip_key="store_relative_to_treeview_txt">
+            <trans lan="en"><![CDATA[Store path relative:]]></trans>
+            <trans lan="de"><![CDATA[Pfadangabe relativ speichern:]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/EditResourceDialog.py #    185
+dialogs/AddResourceDialog.py #    169]]></snip_usages>
+        </snippet>
+        <snippet snip_key="sub_layer_not_found">
+            <trans lan="en"><![CDATA[Sub-Layer '{0}' not found...]]></trans>
+            <trans lan="de"><![CDATA[Sub-Layer '{0}' nicht gefunden...]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[LayerLib.py #   2135]]></snip_usages>
+        </snippet>
+        <snippet snip_key="container_file_path_txt">
+            <trans lan="en"><![CDATA[Container-File:]]></trans>
+            <trans lan="de"><![CDATA[Container-Datei:]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/DataSourcesDialog.py #    163]]></snip_usages>
+        </snippet>
+        <snippet snip_key="DataSourcesDialog_header">
+            <trans lan="en"><![CDATA[Show/edit data-sources in container-file]]></trans>
+            <trans lan="de"><![CDATA[Datenquellen in Container-Datei anzeigen/bearbeiten]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/DataSourcesDialog.py #    151]]></snip_usages>
+        </snippet>
+        <snippet snip_key="qpb_convert_paths_relative_txt">
+            <trans lan="en"><![CDATA[Convert absolute paths to relative paths:]]></trans>
+            <trans lan="de"><![CDATA[Absolute Pfade nach relativ umwandeln:]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/LayerLibDialog.py #    284]]></snip_usages>
+        </snippet>
+        <snippet snip_key="qpb_convert_paths_relative_ttp">
+            <trans lan="en"><![CDATA[Convert all paths in Library relative to Treview-XML-File<br>
+(especially usefull for libraries used on Linux <b>and</b> Windows)]]></trans>
+            <trans lan="de"><![CDATA[Alle Pfade der Library relativ zur Treview-XML-Datei umwandeln<br>
+(sinnvoll bei Nutzung der gleichen Datei unter Linux <b>und</b> Windows)]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/LayerLibDialog.py #    287]]></snip_usages>
+        </snippet>
+        <snippet snip_key="qpb_convert_paths_absolute_txt">
+            <trans lan="en"><![CDATA[Convert relative paths to absolute:]]></trans>
+            <trans lan="de"><![CDATA[Relative Pfade nach absolut umwandeln:]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/LayerLibDialog.py #    294]]></snip_usages>
+        </snippet>
+        <snippet snip_key="qpb_convert_paths_absolute_ttp">
+            <trans lan="en"><![CDATA[Convert all paths in Library absolute to Treview-XML-File]]></trans>
+            <trans lan="de"><![CDATA[Alle Pfade der Library absolut zur Treview-XML-Datei umwandeln]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/LayerLibDialog.py #    297]]></snip_usages>
+        </snippet>
+        <snippet snip_key="dlg_confirm_convert_paths_relative_title">
+            <trans lan="en"><![CDATA[Convert absolute paths to relative]]></trans>
+            <trans lan="de"><![CDATA[Absolute Pfade nach relativ umwandeln]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[LayerLib.py #    959]]></snip_usages>
+        </snippet>
+        <snippet snip_key="dlg_confirm_convert_paths_relative_txt">
+            <trans lan="en"><![CDATA[Convert {0} absolute path(s) to relative?]]></trans>
+            <trans lan="de"><![CDATA[{0} absolute Pfad(e) nach relativ umwandeln?]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[LayerLib.py #    961]]></snip_usages>
+        </snippet>
+        <snippet snip_key="new_layer_invalid">
+            <trans lan="en"><![CDATA[Layer '{0}' invalid! Datasource:
+{1}]]></trans>
+            <trans lan="de"><![CDATA[Layer '{0}' fehlerhaft! Datasource:
+{1}]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[LayerLib.py #   2513]]></snip_usages>
+        </snippet>
+        <snippet snip_key="dlg_confirm_convert_paths_absolute_title">
+            <trans lan="en"><![CDATA[Convert relative paths to absolute]]></trans>
+            <trans lan="de"><![CDATA[Relative Pfade nach absolut umwandeln]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[LayerLib.py #   1059]]></snip_usages>
+        </snippet>
+        <snippet snip_key="dlg_confirm_convert_paths_absolute_txt">
+            <trans lan="en"><![CDATA[Convert {0} relative path(s) to absolute?]]></trans>
+            <trans lan="de"><![CDATA[{0} relative Pfad(e) nach absolut umwandeln?]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[LayerLib.py #   1061]]></snip_usages>
+        </snippet>
+        <snippet snip_key="qpte_result_log_txt">
+            <trans lan="en"><![CDATA[Result-Log:]]></trans>
+            <trans lan="de"><![CDATA[Ergebnis-Log:]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/LayerLibDialog.py #    306]]></snip_usages>
+        </snippet>
+        <snippet snip_key="confirm_delete_folder_with_contents">
+            <trans lan="en"><![CDATA[{0} resources in {1} folders]]></trans>
+            <trans lan="de"><![CDATA[{0} Resourcen in {1} Ordnern]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/MyConfirmDialog.py #    145]]></snip_usages>
+        </snippet>
+        <snippet snip_key="confirm_delete_folder">
+            <trans lan="en"><![CDATA[Delete folder '{0}'?]]></trans>
+            <trans lan="de"><![CDATA[Ordner '{0}' löschen?]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/MyConfirmDialog.py #    142]]></snip_usages>
+        </snippet>
+        <snippet snip_key="confirm_delete_resource">
+            <trans lan="en"><![CDATA[Delete resource '{0}'?]]></trans>
+            <trans lan="de"><![CDATA[Resource '{0}' löschen?]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/MyConfirmDialog.py #    171]]></snip_usages>
+        </snippet>
+        <snippet snip_key="confirm_single_qpb_txt">
+            <trans lan="en"><![CDATA[Delete]]></trans>
+            <trans lan="de"><![CDATA[Löschen]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/MyConfirmDialog.py #     95]]></snip_usages>
+        </snippet>
+        <snippet snip_key="confirm_always_qpb_txt">
+            <trans lan="en"><![CDATA[Delete (do not ask again...)]]></trans>
+            <trans lan="de"><![CDATA[Löschen (ohne weitere Rückfrage...)]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/MyConfirmDialog.py #    100]]></snip_usages>
+        </snippet>
+        <snippet snip_key="cancel_qpb_txt">
+            <trans lan="en"><![CDATA[Cancel]]></trans>
+            <trans lan="de"><![CDATA[Abbruch]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/MyConfirmDialog.py #    105]]></snip_usages>
+        </snippet>
+        <snippet snip_key="maplayer_qtw_ttp">
+            <trans lan="en"><![CDATA[List of maplayers in container-file]]></trans>
+            <trans lan="de"><![CDATA[Liste der Maplayer in der Container-Datei]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/DataSourcesDialog.py #    190]]></snip_usages>
+        </snippet>
+        <snippet snip_key="store_absolute_qcb_ttp">
+            <trans lan="en"><![CDATA[Storage mode absolute/relative in projects depending on project-settings...]]></trans>
+            <trans lan="de"><![CDATA[Speicherung der Pfadangaben absolut/relativ abhängig von Projekt-Einstellungen...]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/DataSourcesDialog.py #    458]]></snip_usages>
+        </snippet>
+        <snippet snip_key="store_absolute_qcb_qlr_ttp">
+            <trans lan="en"><![CDATA[Paths in layerdefinition-files (*.qlr) can be stored absolute, relative or mixed, project-settings not relevant/affected]]></trans>
+            <trans lan="de"><![CDATA[Pfade in Layerdefinitions-Dateien (*.qlr) können absolut, relativ oder gemischt gespeichert werden, Projekt-Einstellungen nicht relevant/betroffen]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/DataSourcesDialog.py #    466]]></snip_usages>
+        </snippet>
+        <snippet snip_key="EditDataSourcePath_dom_doc_saved_success">
+            <trans lan="en"><![CDATA[Container-file '{0}' successfully saved!]]></trans>
+            <trans lan="de"><![CDATA[Container-Datei '{0}' gespeichert!]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/DataSourcesDialog.py #    729]]></snip_usages>
+        </snippet>
+        <snippet snip_key="EditDataSourcePath_dom_doc_saved_error">
+            <trans lan="en"><![CDATA[Container-file '{0}' could not be saved!]]></trans>
+            <trans lan="de"><![CDATA[Container-Datei '{0}' konnte nicht gespeichert werden!]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/DataSourcesDialog.py #    738]]></snip_usages>
+        </snippet>
+        <snippet snip_key="store_file_path_mode_qcb">
+            <trans lan="en"><![CDATA[Path storage mode:]]></trans>
+            <trans lan="de"><![CDATA[Pfad-Speicher-Modus:]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/DataSourcesDialog.py #    217]]></snip_usages>
+        </snippet>
+        <snippet snip_key="ed_update_datasource_qpb_txt">
+            <trans lan="en"><![CDATA[Update Datasource...]]></trans>
+            <trans lan="de"><![CDATA[Update Datasource...]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/DataSourcesDialog.py #    326]]></snip_usages>
+        </snippet>
+        <snippet snip_key="ed_datasource_qpte_txt">
+            <trans lan="en"><![CDATA[Datasource:]]></trans>
+            <trans lan="de"><![CDATA[Datasource:]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/DataSourcesDialog.py #    318]]></snip_usages>
+        </snippet>
+        <snippet snip_key="ed_datasource_path_qlbl_txt">
+            <trans lan="en"><![CDATA[Path:]]></trans>
+            <trans lan="de"><![CDATA[Pfad:]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/DataSourcesDialog.py #    274]]></snip_usages>
+        </snippet>
+        <snippet snip_key="ed_layer_name_qle_txt">
+            <trans lan="en"><![CDATA[Layername:]]></trans>
+            <trans lan="de"><![CDATA[Layer-Name:]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/DataSourcesDialog.py #    263]]></snip_usages>
+        </snippet>
+        <snippet snip_key="ed_layer_id_qlbl_txt">
+            <trans lan="en"><![CDATA[Layer-ID:]]></trans>
+            <trans lan="de"><![CDATA[Layer-ID:]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/DataSourcesDialog.py #    253]]></snip_usages>
+        </snippet>
+        <snippet snip_key="dlg_select_container_file_title">
+            <trans lan="en"><![CDATA[Select Container-File]]></trans>
+            <trans lan="de"><![CDATA[Container-Datei auswählen]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/DataSourcesDialog.py #    765]]></snip_usages>
+        </snippet>
+        <snippet snip_key="ed_sub_layer_qlbl_2_ttp">
+            <trans lan="en"><![CDATA[Currently registered sub-layer]]></trans>
+            <trans lan="de"><![CDATA[Aktuell registrierter Sub-Layer]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/DataSourcesDialog.py #    297]]></snip_usages>
+        </snippet>
+        <snippet snip_key="ed_sub_layer_qlwdg_qlbl_txt">
+            <trans lan="en"><![CDATA[Available Sub-Layers:]]></trans>
+            <trans lan="de"><![CDATA[Verfügbare Sub-Layer:]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/DataSourcesDialog.py #    302]]></snip_usages>
+        </snippet>
+        <snippet snip_key="ed_sub_layer_qlwdg_ttp">
+            <trans lan="en"><![CDATA[Select sub-layer for this datasource]]></trans>
+            <trans lan="de"><![CDATA[Sub-Layer für Datasource auswählen]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/DataSourcesDialog.py #    876]]></snip_usages>
+        </snippet>
+        <snippet snip_key="ed_sub_layer_qlwdg_no_sublayers_ttp">
+            <trans lan="en"><![CDATA[No sub-layers, please select vector-layer-file]]></trans>
+            <trans lan="de"><![CDATA[Keine Sub-Layer, bitte Vektor-Layer-Datei auswählen]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/DataSourcesDialog.py #    712
+dialogs/DataSourcesDialog.py #    878]]></snip_usages>
+        </snippet>
+        <snippet snip_key="tree_view_edit_mode_not_enabled">
+            <trans lan="en"><![CDATA[TreeView not in edit-mode]]></trans>
+            <trans lan="de"><![CDATA[TreeView nicht im Editier-Modus]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[qt/MyQtWidgets.py #    754]]></snip_usages>
+        </snippet>
+        <snippet snip_key="skipped_file_suffix_unsupported">
+            <trans lan="en"><![CDATA[Skipped {0} file(s) with unsupported file-suffices (supported: *.qlr/*.qgs/*.qgz)]]></trans>
+            <trans lan="de"><![CDATA[{0} Dateien mit nicht unterstützter Erweiterung übersprungen (zulässig: *.qlr/*.qgs/*.qgz)]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[LayerLib.py #   1453]]></snip_usages>
+        </snippet>
+        <snippet snip_key="insert_layer_drop_area_ttp">
+            <trans lan="en"><![CDATA[<div style='white-space: nowrap; '>
+Drag&Drop single container-file (*.qgs/*.qgz/*.qlr)<br>
+from file-system/QGis-Browser-Panel to<br>
+show metadata/contents and add to Library
+</div>]]></trans>
+            <trans lan="de"><![CDATA[<div style='white-space: nowrap; '>
+Drag&Drop Container-Datei (*.qgs/*.qgz/*.qlr)<br>
+aus Dateisystem/QGis-Browser-Panel,<br>
+um Metadaten und Inhalte anzuzeigen und zur Library hinzuzufügen
+</div>]]></trans>
+            <snip_info><![CDATA[Nearly the same as inspect_layer_drop_area_html, but for inserts, so only accepts qlr/qgs/qgz]]></snip_info>
+            <snip_usages><![CDATA[dialogs/EditResourceDialog.py #    223
+dialogs/EditResourceDialog.py #    227
+dialogs/EditResourceDialog.py #    531
+dialogs/AddResourceDialog.py #    208
+dialogs/AddResourceDialog.py #    213
+dialogs/AddResourceDialog.py #    664]]></snip_usages>
+        </snippet>
+        <snippet snip_key="uri_type_not_supported">
+            <trans lan="en"><![CDATA[URI-Type '{0}' not supported (only qgs/qgz-projects or qlr-Layer-Definition-Files)]]></trans>
+            <trans lan="de"><![CDATA[URI-Typ '{0}' nicht unterstützt (nur qgs/qgz-Projekte oder qlr-Layer-Definitions-Dateien)]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/EditResourceDialog.py #    669
+dialogs/AddResourceDialog.py #    410]]></snip_usages>
+        </snippet>
+        <snippet snip_key="qlr_exported_to">
+            <trans lan="en"><![CDATA[Project-layer exported as Layer-Definition-File '{0}']]></trans>
+            <trans lan="de"><![CDATA[Project-Layer als Layer-Definitions-Datei '{0}' exportiert]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[LayerLib.py #   2255]]></snip_usages>
+        </snippet>
+        <snippet snip_key="dlg_reimport_qlr_title">
+            <trans lan="en"><![CDATA[Re-Import qlr-file to Library]]></trans>
+            <trans lan="de"><![CDATA[Re-Import qlr-Datei zur Library]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[LayerLib.py #   2259]]></snip_usages>
+        </snippet>
+        <snippet snip_key="dlg_reimport_qlr_txt">
+            <trans lan="en"><![CDATA[<div style='white-space: nowrap; '>
+Layer/Group successfully exported as Layer-Definition-File:<br>
+{0}<br><br>
+Add exported file to Library?
+</div>]]></trans>
+            <trans lan="de"><![CDATA[<div style='white-space: nowrap; '>
+Layer/Layer-Gruppe exportiert als Layer-Definitions-Datei:<br>
+{0}<br><br>
+Exportierte Datei zur Library hinzufügen?
+</div>]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[LayerLib.py #   2261]]></snip_usages>
+        </snippet>
+        <snippet snip_key="store_relative_to_treeview_ttp">
+            <trans lan="en"><![CDATA[Store resource-path relative to TreeView-XML-File]]></trans>
+            <trans lan="de"><![CDATA[Resource-Pfad relativ zur TreeView-XML-Datei speichern]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/EditResourceDialog.py #    189
+dialogs/AddResourceDialog.py #    173]]></snip_usages>
+        </snippet>
+        <snippet snip_key="ed_virtual_query_qlbl_txt">
+            <trans lan="en"><![CDATA[Virtual query:]]></trans>
+            <trans lan="de"><![CDATA[Virtual query:]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/DataSourcesDialog.py #    327]]></snip_usages>
+        </snippet>
+        <snippet snip_key="ed_layer_provider_qlbl_txt">
+            <trans lan="en"><![CDATA[Provider:]]></trans>
+            <trans lan="de"><![CDATA[Provider:]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/DataSourcesDialog.py #    263]]></snip_usages>
+        </snippet>
+        <snippet snip_key="drag_and_drop_directory_not_supported">
+            <trans lan="en"><![CDATA[Directory-Drag&Drop not supported]]></trans>
+            <trans lan="de"><![CDATA[Verzeichnis-Drag&Drop nicht zulässig]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[LayerLib.py #   1446
+dialogs/AddResourceDialog.py #    319]]></snip_usages>
+        </snippet>
+        <snippet snip_key="resource_path_fqle">
+            <trans lan="en"><![CDATA[Path:]]></trans>
+            <trans lan="de"><![CDATA[Pfad:]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/AddResourceDialog.py #    125]]></snip_usages>
+        </snippet>
+        <snippet snip_key="resource_not_found">
+            <trans lan="en"><![CDATA[Resource '{0}' not found...]]></trans>
+            <trans lan="de"><![CDATA[Resource '{0}' nicht gefunden...]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/EditResourceDialog.py #    521]]></snip_usages>
+        </snippet>
+        <snippet snip_key="resource_id_qlbl_ttp">
+            <trans lan="en"><![CDATA[Resource-ID: internal used unique key in TreeView-XML-File]]></trans>
+            <trans lan="de"><![CDATA[Resource-ID: intern verwendeter eindeutiger Schlüsselwert in TreeView-XML-Datei]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/EditResourceDialog.py #    137]]></snip_usages>
+        </snippet>
+        <snippet snip_key="folder_id_qlbl_ttp">
+            <trans lan="en"><![CDATA[Folder-ID: internal used unique key in TreeView-XML-File]]></trans>
+            <trans lan="de"><![CDATA[Ordner-ID: intern verwendeter eindeutiger Schlüsselwert in TreeView-XML-Datei]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/EditFolderDialog.py #    105]]></snip_usages>
+        </snippet>
+        <snippet snip_key="folder_id_qle">
+            <trans lan="en"><![CDATA[Folder-ID:]]></trans>
+            <trans lan="de"><![CDATA[Ordner-ID:]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/EditFolderDialog.py #    102]]></snip_usages>
+        </snippet>
+        <snippet snip_key="dlg_confirm_update_container_file_title">
+            <trans lan="en"><![CDATA[Update Container-File]]></trans>
+            <trans lan="de"><![CDATA[Container-Datei speichern]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/DataSourcesDialog.py #    764]]></snip_usages>
+        </snippet>
+        <snippet snip_key="dlg_confirm_update_container_file_text">
+            <trans lan="en"><![CDATA[Save container-file?
+
+(Caution! Consider create backup beforehand...)]]></trans>
+            <trans lan="de"><![CDATA[Container-Datei speichern?
+
+(Vorsicht! Zur Sicherheit vorab noch ein Backup erstellen...)]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/DataSourcesDialog.py #    728]]></snip_usages>
+        </snippet>
+        <snippet snip_key="SelectSubLayerDialog_vector_header">
+            <trans lan="en"><![CDATA[<b>Select Sub-Layer</b><br>
+Vector-Layer-File: '{0}'
+]]></trans>
+            <trans lan="de"><![CDATA[<b>Auswahl Sub-Layer</b><br>
+Vector-Layer-Datei: '{0}'
+]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/SelectSubLayerDialog.py #    216]]></snip_usages>
+        </snippet>
+        <snippet snip_key="SelectSubLayerDialog_domdoc_header">
+            <trans lan="en"><![CDATA[<b>Select Sub-Layer</b>]]></trans>
+            <trans lan="de"><![CDATA[<b>Auswahl Sub-Layer</b>]]></trans>
+            <snip_info><![CDATA[]]></snip_info>
+            <snip_usages><![CDATA[dialogs/SelectSubLayerDialog.py #    239]]></snip_usages>
+        </snippet>
+    </snippets>
