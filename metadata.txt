@@ -1,0 +1,40 @@
+[general]
+name=LayerLib
+version=1.0.0
+category=Plugins
+icon=icons/ll_plugin_icon.svg
+experimental=False
+deprecated=False
+qgisMinimumVersion=3.0
+qgisMaximumVersion=4.99
+tags=layer, library, vector, raster, WMS, WFS, OGC, Layer Definition File, qlr
+description=Library for layer-sources
+about=(2026-11-24)
+  This plugin supports the creation of a structured library of file-based layer-sources:
+  - QGis-project-files (*.qgz, *.qgs)
+  - Layer-definition-files (*.qlr)
+  Additional tools allow the review and correction of the registered contents, f. e. if the filepath of a layer in a QGis-project is invalid.
+
+  --------------------------------------
+
+  Das Plugin unterstützt den Aufbau einer strukturierten Library dateibasierter Layer-Datenquellen:
+  - QGis-Projekte (*.qgz, *.qgs)
+  - Layer-Definitions-Dateien (*.qlr)
+  Zusatz-Tools erlauben die Kontrolle und Korrektur der Pfade in den registrierten Datenquellen, z. B. falls der Dateipfad eines Layers in einem QGis-Projekt fehlerhaft ist.
+
+author=Ludwig Kniprath
+email=ludwig[at]kni-online.de
+homepage=https://github.com/Ludwig-K/QGisLayerLib/
+tracker=https://github.com/Ludwig-K/QGisLayerLib/issues
+repository=https://github.com/Ludwig-K/QGisLayerLib
+
+changelog=
+  <p>1.0.0 (2026-11) initial release
+  - support QGis 4 (PyQT-4)
+  - Store paths absolute or relative
+  - find and edit incorrect file paths in registered sources
+  - find and edit incorrect file paths inside container-files (*.qgz, *.qgs, *.qlr)
+  - bugfixes
+  - updated documentation
+
+
