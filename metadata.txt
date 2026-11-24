@@ -1,6 +1,6 @@
 [general]
 name=LayerLib
-version=1.0.0
+version=1.0.1
 category=Plugins
 icon=icons/ll_plugin_icon.svg
 experimental=False
@@ -23,18 +23,21 @@ about=(2026-11-24)
   Zusatz-Tools erlauben die Kontrolle und Korrektur der Pfade in den registrierten Datenquellen, z. B. falls der Dateipfad eines Layers in einem QGis-Projekt fehlerhaft ist.
 
 author=Ludwig Kniprath
-email=ludwig[at]kni-online.de
+email=ludwig@kni-online.de
 homepage=https://github.com/Ludwig-K/QGisLayerLib/
 tracker=https://github.com/Ludwig-K/QGisLayerLib/issues
 repository=https://github.com/Ludwig-K/QGisLayerLib
 
 changelog=
-  <p>1.0.0 (2026-11) initial release
+  <p>1.0.1 (2026-11) first public release
   - support QGis 4 (PyQT-4)
   - Store paths absolute or relative
   - find and edit incorrect file paths in registered sources
   - find and edit incorrect file paths inside container-files (*.qgz, *.qgs, *.qlr)
   - bugfixes
   - updated documentation
+  <p>1.0.0 (2026-09) initial release, not published
+  - support QGis 4 (PyQT-4)
+
 
 
