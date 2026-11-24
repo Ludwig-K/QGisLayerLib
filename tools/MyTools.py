@@ -23,7 +23,7 @@ the Free Software Foundation; either version 2 of the License, or
 """
 
 # Rev. 2026-11-23
-import os, sys, re, random, string, datetime, pytz, tempfile
+import os, sys, re, secrets, string, datetime, pytz, tempfile
 
 from osgeo import gdal, ogr
 
@@ -536,8 +536,8 @@ def clear_widget(wdg: QWidget):
     try:
         wdg.clear()
         wdg.setToolTip("")
-    except:
-        pass
+    except Exception as e:
+        QgsMessageLog.logMessage(f"clear_widget exception: {e} ", "LayerLib", Qgis.MessageLevel.Info)
 
 
 def get_absolute_path(check_path: str, rel_to_dir: str) -> str:
@@ -668,8 +668,8 @@ def get_valid_file(
                         (Path(rel_src_dir) / Path(check_path)).resolve().as_posix()
                     )
 
-                except Exception:
-                    pass
+                except Exception as e:
+                    QgsMessageLog.logMessage(f"path not resolvable: {e} ", "LayerLib", Qgis.MessageLevel.Info)
 
             if os.path.exists(check_path):
                 if return_dirs and os.path.isfile(check_path):
@@ -1202,9 +1202,14 @@ def create_random_id(length: int = 16) -> str:
     # Rev. 2026-11-23
 
     # random mix of lower chars, upper chars, numbers, length + 2 because of later remove of leading numbers
-    random_string = "".join(
-        random.choices(string.ascii_letters + string.digits, k=length + 2)
-    )
+
+    token = secrets.token_hex(16)
+
+    char_list = string.ascii_letters + string.digits
+
+    # previously used random was marked as "not suitable for security/cryptographic purposes"
+    # alternatively append # nosec B311
+    random_string = ''.join(secrets.choice(char_list) for _ in range(length + 3))
 
     # remove a randomly leading number, which is invalid for XML-id-attribute
     random_string = re.sub("^[0-9]+", "", random_string)
@@ -1642,10 +1647,6 @@ def parse_directory(
 
         sr = parse_result.add_resource("directory", path=dir_path)
 
-        parse_result.add_line(
-            f"<a href='tool_evaluate_storable_resource?src_action=show_file_in_explorer&src_dialog={src_dialog}&src_id={sr.id}'>Show in explorer...</a>",
-            indent_cnt + 1,
-        )
 
         all_files = []
         for path, subdirs, files in os.walk(dir_path):
@@ -1710,10 +1711,6 @@ def parse_file(
 
         sr = parse_result.add_resource("file", path=file_path_posix.as_posix())
 
-        parse_result.add_line(
-            f"<a href='tool_evaluate_storable_resource?src_action=show_file_in_explorer&src_dialog={src_dialog}&src_id={sr.id}'>Show in explorer...</a>",
-            indent_cnt + 1,
-        )
 
         # remove leading point .shp => shp
         file_suffix = str.lower(file_path_posix.suffix.lstrip("."))
@@ -1772,12 +1769,12 @@ def parse_file(
                 try:
                     vector_ds = ogr.Open(file_path_posix.as_posix(), gdal.GA_ReadOnly)
                 except Exception as e:
-                    pass
+                    QgsMessageLog.logMessage(f"ogr.Open exception: {e} ", "LayerLib", Qgis.MessageLevel.Info)
 
                 try:
                     raster_ds = gdal.Open(file_path_posix.as_posix(), gdal.GA_ReadOnly)
                 except Exception as e:
-                    pass
+                    QgsMessageLog.logMessage(f"gdal.Open exception: {e} ", "LayerLib", Qgis.MessageLevel.Info)
 
                 if vector_ds or raster_ds:
                     if vector_ds:
@@ -1916,10 +1913,6 @@ def parse_container_file(
                 "container-file", path=file_path_posix.as_posix()
             )
 
-            parse_result.add_line(
-                f"<a href='tool_evaluate_storable_resource?src_action=show_file_in_explorer&src_dialog={src_dialog}&src_id={sr.id}'>Show in explorer...</a>",
-                indent_cnt + 1,
-            )
 
             parse_result.add_line(
                 f"<a href='tool_evaluate_storable_resource?src_action=show_datasources&src_dialog={src_dialog}&src_id={sr.id}'>Show/Edit datasources...</a>",
@@ -2085,10 +2078,6 @@ def parse_qlr_sub_layer(
 
             sr = parse_result.add_resource("file", path=map_layer.abs_path)
 
-            parse_result.add_line(
-                f"<a href='tool_evaluate_storable_resource?src_action=show_file_in_explorer&src_dialog={src_dialog}&src_id={sr.id}'>Show in explorer...</a>",
-                indent_cnt + 1,
-            )
 
             if container_path and map_layer.file_exists and map_layer.provider == "ogr":
 
@@ -2349,10 +2338,7 @@ def parse_ogr_file(
 
         # sr = parse_result.add_resource("file", path=file_path_posix.as_posix())
 
-        # parse_result.add_line(
-        #     f"<a href='tool_evaluate_storable_resource?src_action=show_file_in_explorer&src_dialog={src_dialog}&src_id={sr.id}'>Show in explorer...</a>",
-        #     indent_cnt + 1,
-        # )
+
 
         # remove leading point .shp => shp
         file_suffix = str.lower(file_path_posix.suffix.lstrip("."))
@@ -2459,24 +2445,13 @@ def parse_gdal_file(
                         "raster-file", path=file_path_posix.as_posix()
                     )
 
-                    parse_result.add_line(
-                        f"<a href='tool_evaluate_storable_resource?src_action=show_file_in_explorer&src_dialog={src_dialog}&src_id={sr.id}'>Show in explorer...</a>",
-                        indent_cnt + 1,
-                    )
+
 
                     parse_result.add_line(
                         f"<a href='tool_evaluate_storable_resource?src_action=load_raster_file&src_dialog={src_dialog}&src_id={sr.id}'>Import Raster-Layer '{file_path_posix.name}'...</a>",
                         indent_cnt + 1,
                     )
 
-                    parse_result.add_line(
-                        f"<a href='tool_evaluate_storable_resource?src_action=open_with_app&src_dialog={src_dialog}&src_id={sr.id}'>Open with external app...</a>",
-                        indent_cnt + 1,
-                    )
-
-                    # <osgeo.gdal.Dataset; proxy of <Swig Object of type 'GDALDatasetShadow *' at 0x70138a414ab0> >
-
-                    # https://gdal.org/en/stable/api/python/index.html
 
                     # 0 => shortName, 1 => longName, 2 => extensions
                     parse_result.add_line(
@@ -2656,7 +2631,7 @@ def parse_gdal_file(
                                     indent_cnt + 2,
                                 )
                             except Exception as e:
-                                pass
+                                QgsMessageLog.logMessage(f"EXIF_DateTimeOriginal exception: {e} ", "LayerLib", Qgis.MessageLevel.Info)
 
                         if _lat and _lon:
                             sr = parse_result.add_resource(
