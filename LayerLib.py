@@ -1248,12 +1248,6 @@ class LayerLib(object):
                         invalid_path_resource_ids[resource_id] = file_path
 
                 except Exception as e:
-                    # layer_label = layer_node.namedItem("label").firstChild().toText().data()
-                    # all layers without or empty <path></path> rsp. <path><![CDATA[]]></path> or not found paths
-                    # self.my_dialog.qpte_result_log.appendPlainText(f" - Invalid path:")
-                    # self.my_dialog.qpte_result_log.appendPlainText(f"      resource '{layer_label}'")
-                    # self.my_dialog.qpte_result_log.appendPlainText(f"      path '{file_path}'")
-                    # self.my_dialog.qpte_result_log.appendPlainText(f"      Error '{e}'")
                     invalid_path_resource_ids[resource_id] = file_path
 
             if invalid_path_resource_ids:
@@ -2746,120 +2740,74 @@ class LayerLib(object):
         """standard-to_implement-function for each plugin:
         reset the GUI
         triggered by plugin-deactivation, project-close, QGis-Quit
-        each instruction encapsulated with try...except to ensure no orphans after uninstall, if anything happens
         """
         # Rev. 2026-11-24
 
+        # hopefully without any exceptions, else the subsequents in the try-command-list will not be executed
         try:
             self.sys_write_config()
-        except Exception as e:
-            pass
+            self.iface.unregisterCustomDropHandler(self.my_drop_handler)
+            # hide *and* remove canvas-graphics, they are *not* garbage-collected and deleted with self!
+            self.cvs_hide_temp_map_graphics()
+            self.iface.mapCanvas().scene().removeItem(self.rb_extent)
+            self.iface.mapCanvas().scene().removeItem(self.vm_gps)
+            self.iface.mapCanvas().scene().removeItem(self.rb_dir)
 
-        try:
             self.iface.removeToolBarIcon(self.qact_dlg_show)
-        except Exception as e:
-            pass
-
-        try:
             self.iface.removePluginMenu("LayerLib", self.qact_dlg_show)
             self.iface.removePluginMenu("LayerLib", self.qact_show_help)
+
+            self.my_dialog.setAttribute(Qt.WidgetAttribute.WA_DeleteOnClose, True)
+            self.my_dialog.close()
+            del self.my_dialog
+
+            self.edit_folder_dialog.setAttribute(
+                Qt.WidgetAttribute.WA_DeleteOnClose, True
+            )
+            self.edit_folder_dialog.close()
+            del self.edit_folder_dialog
+
+            self.add_folder_dialog.setAttribute(
+                Qt.WidgetAttribute.WA_DeleteOnClose, True
+            )
+            self.add_folder_dialog.close()
+
+            self.edit_resource_dialog.setAttribute(
+                Qt.WidgetAttribute.WA_DeleteOnClose, True
+            )
+            self.edit_resource_dialog.close()
+            del self.edit_resource_dialog
+
+            self.add_resource_dialog.setAttribute(
+                Qt.WidgetAttribute.WA_DeleteOnClose, True
+            )
+            self.add_resource_dialog.close()
+            del self.add_resource_dialog
+
+            self.select_uri_dialog.setAttribute(
+                Qt.WidgetAttribute.WA_DeleteOnClose, True
+            )
+            self.select_uri_dialog.close()
+            del self.select_uri_dialog
+
+            self.data_sources_dialog.setAttribute(
+                Qt.WidgetAttribute.WA_DeleteOnClose, True
+            )
+            self.data_sources_dialog.close()
+            del self.data_sources_dialog
+
+            self.my_confirm_dialog.setAttribute(
+                Qt.WidgetAttribute.WA_DeleteOnClose, True
+            )
+            self.my_confirm_dialog.close()
+            del self.my_confirm_dialog
+
         except Exception as e:
-            pass
+            self.iface.messageBar().pushMessage(
+                "LayerLib", "Plugin could not be unloaded completely...", level=Qgis.MessageLevel.Warning
+            )
 
-        try:
-            if self.my_dialog:
-                self.my_dialog.setAttribute(Qt.WidgetAttribute.WA_DeleteOnClose, True)
-                self.my_dialog.close()
-                del self.my_dialog
-        except Exception as e:
-            pass
 
-        try:
-            if self.edit_folder_dialog:
-
-                self.edit_folder_dialog.setAttribute(
-                    Qt.WidgetAttribute.WA_DeleteOnClose, True
-                )
-                self.edit_folder_dialog.close()
-                del self.edit_folder_dialog
-        except Exception as e:
-            pass
-
-        try:
-            if self.add_folder_dialog:
-
-                self.add_folder_dialog.setAttribute(
-                    Qt.WidgetAttribute.WA_DeleteOnClose, True
-                )
-                self.add_folder_dialog.close()
-                del self.add_folder_dialog
-        except Exception as e:
-            pass
-
-        try:
-            if self.edit_resource_dialog:
-
-                self.edit_resource_dialog.setAttribute(
-                    Qt.WidgetAttribute.WA_DeleteOnClose, True
-                )
-                self.edit_resource_dialog.close()
-                del self.edit_resource_dialog
-        except Exception as e:
-            pass
-
-        try:
-            if self.add_resource_dialog:
-
-                self.add_resource_dialog.setAttribute(
-                    Qt.WidgetAttribute.WA_DeleteOnClose, True
-                )
-                self.add_resource_dialog.close()
-                del self.add_resource_dialog
-        except Exception as e:
-            pass
-
-        try:
-            if self.select_uri_dialog:
-
-                self.select_uri_dialog.setAttribute(
-                    Qt.WidgetAttribute.WA_DeleteOnClose, True
-                )
-                self.select_uri_dialog.close()
-                del self.select_uri_dialog
-        except Exception as e:
-            pass
-
-        try:
-            if self.data_sources_dialog:
-                self.data_sources_dialog.setAttribute(
-                    Qt.WidgetAttribute.WA_DeleteOnClose, True
-                )
-                self.data_sources_dialog.close()
-                del self.data_sources_dialog
-        except Exception as e:
-            pass
-
-        try:
-            if self.my_confirm_dialog:
-
-                self.my_confirm_dialog.setAttribute(
-                    Qt.WidgetAttribute.WA_DeleteOnClose, True
-                )
-                self.my_confirm_dialog.close()
-                del self.my_confirm_dialog
-        except Exception as e:
-            pass
-
-        try:
-            self.iface.unregisterCustomDropHandler(self.my_drop_handler)
-        except Exception as e:
-            pass
-
-        # hide *and* remove canvas-graphics, they are *not* garbage-collected and deleted with self!
-        self.cvs_hide_temp_map_graphics()
-        self.iface.mapCanvas().scene().removeItem(self.rb_extent)
-        self.iface.mapCanvas().scene().removeItem(self.vm_gps)
-        self.iface.mapCanvas().scene().removeItem(self.rb_dir)
 
 
     def cvs_hide_temp_map_graphics(self):
