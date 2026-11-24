@@ -366,52 +366,47 @@ class LayerLib(object):
 
             if config_object.has_section("CONFIG"):
                 config_section = config_object["CONFIG"]
-                treeview_source_path = config_section.get("treeview_source_path")
-                if isinstance(treeview_source_path, str) and os.path.isfile(
-                    treeview_source_path
-                ):
-                    self.treeview_source_path = treeview_source_path
 
+                if config_section.get("treeview_source_path") and isinstance(config_section.get("treeview_source_path"),str) and os.path.isfile(config_section.get("treeview_source_path")):
+                    self.treeview_source_path = config_section.get("treeview_source_path")
+
+                # should be string
                 self.add_layer_visibility = config_section.get("add_layer_visibility")
 
                 # bool stored as True/False-string
                 self.dialog_attached = config_section.get("dialog_attached") == "True"
 
-                try:
-                    self.dialog_active_tab_index = int(
-                        config_section.get("dialog_active_tab_index")
-                    )
-                except Exception as e:
-                    pass
+                if config_section.get("dialog_active_tab_index") and config_section.get("dialog_active_tab_index").isdigit():
+                    self.dialog_active_tab_index = int(config_section.get("dialog_active_tab_index"))
+                else:
+                    self.dialog_active_tab_index = 0
 
                 # last detached position and size:
-                try:
+                if config_section.get("dialog_x") and config_section.get("dialog_x").isdigit():
                     self.dialog_x = int(config_section.get("dialog_x"))
-                except Exception as e:
-                    pass
+                else:
+                    self.dialog_x = self.iface.mainWindow().geometry().left() + 100
 
-                try:
+                if config_section.get("dialog_y") and config_section.get("dialog_y").isdigit():
                     self.dialog_y = int(config_section.get("dialog_y"))
-                except Exception as e:
-                    pass
+                else:
+                    self.dialog_y = self.iface.mainWindow().geometry().top() + 100
 
-                try:
+                if config_section.get("dialog_width") and config_section.get("dialog_width").isdigit():
                     self.dialog_width = int(config_section.get("dialog_width"))
-                except Exception as e:
-                    pass
+                else:
+                    self.dialog_width = 400
 
-                try:
+                if config_section.get("dialog_height") and config_section.get("dialog_height").isdigit():
                     self.dialog_height = int(config_section.get("dialog_height"))
-                except Exception as e:
-                    pass
+                else:
+                    self.dialog_height = 600
 
-                tool_mode = config_section.get("tool_mode")
-                if isinstance(tool_mode, str):
-                    self.tool_mode = tool_mode
+                if config_section.get("tool_mode") and isinstance(config_section.get("tool_mode"),str):
+                    self.tool_mode = config_section.get("tool_mode")
 
-                last_user_file = config_section.get("last_user_file")
-                if isinstance(last_user_file, str) and os.path.exists(last_user_file):
-                    self.last_user_file = last_user_file
+                if config_section.get("last_user_file") and isinstance(config_section.get("last_user_file"),str) and os.path.exists(config_section.get("last_user_file")):
+                    self.last_user_file = config_section.get("last_user_file")
 
     def initGui(self):
         """standard-to-implement-function: adapt/extend GUI
@@ -1939,7 +1934,6 @@ class LayerLib(object):
         """triggered by self.inspect_layer_drop_area.anchorClicked
 
         mutiple actions called via hyperlink:
-            show_file_in_explorer
             show_datasources
             load_container_file_layers
             add_resource_to_library
@@ -1949,7 +1943,6 @@ class LayerLib(object):
             load_vector_file
             show_gps_point
             load_raster_file
-            open_with_app
 
         Args:
             url (QUrl): see https://doc.qt.io/qt-6/qurl.html
@@ -1990,38 +1983,7 @@ class LayerLib(object):
                 self.data_sources_dialog.show()
                 self.data_sources_dialog.setFocus()
                 self.data_sources_dialog.raise_()
-            elif src_action == "show_file_in_explorer":
-                path = parse_result.path
-                # can be file or directory
-                if os.path.exists(parse_result.path):
-                    path_posix = Path(parse_result.path)
 
-                    # platform-dependend
-                    if platform.system() == "Darwin":
-                        # macOS
-                        subprocess.run(["open", "--", path_posix.as_posix()])
-                    elif platform.system() == "Windows":
-                        # Windows
-                        # really needs backslashes here! What a culprit...
-                        win_path = path_posix.as_posix().replace("/", "\\")
-                        subprocess.run(["explorer", "/select,", win_path])
-                    else:
-                        # Linux
-                        try:
-                            result = subprocess.run(
-                                [
-                                    f'gdbus call --session --dest org.freedesktop.FileManager1 --object-path /org/freedesktop/FileManager1 --method org.freedesktop.FileManager1.ShowItems "[\'file://{path_posix.as_posix()}\']" ""'
-                                ],
-                                shell=True,
-                            )
-                            if result.stderr:
-                                # linux fall-back-variant: show directory without /select
-                                subprocess.run(
-                                    ["xdg-open", path_posix.as_posix().parent]
-                                )
-                        except Exception as e:
-                            # linux fall-back-variant: show directory without /select
-                            subprocess.run(["xdg-open", path_posix.as_posix().parent])
 
             elif src_action == "load_map_layer":
                 # load a layer by path + layer-id
@@ -2145,7 +2107,7 @@ class LayerLib(object):
                                 "WARNING",
                                 MY_DICT.tr(
                                     "error_opening_raster_file",
-                                    path,
+                                    parse_result.path,
                                     e,
                                 ),
                                 self.my_dialog.log_message_fqlbl,
@@ -2269,34 +2231,7 @@ class LayerLib(object):
                         self.add_resource_dialog.setFocus()
                         self.add_resource_dialog.raise_()
 
-            elif src_action == "open_with_app":
-                # open file with external app, typically raster-files
-                if os.path.isfile(parse_result.path):
-                    path_str = Path(parse_result.path).as_posix()
 
-                    try:
-
-                        # platform-dependend
-                        if platform.system() == "Darwin":
-                            # macOS
-                            cmd = "open"
-                            subprocess.run([cmd, path_str])
-                        elif platform.system() == "Windows":
-                            # cmd = 'cmd'
-                            # subprocess.run([cmd, '/C', 'start', abs_path])
-                            os.startfile(path_str)
-                        else:
-                            # linux variants
-                            cmd = "xdg-open"
-                            subprocess.run([cmd, path_str])
-
-                    except Exception as e:
-                        show_log_message(
-                            "WARNING",
-                            MY_DICT.tr("error_opening_file", path_str, e),
-                            self.my_dialog.log_message_fqlbl,
-                            True,
-                        )
 
             elif src_action == "show_gps_point":
                 # lat/lon-GPS-Coordinates (EPSG:4326), optional image-direction
