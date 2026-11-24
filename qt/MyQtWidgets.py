@@ -90,6 +90,8 @@ from qgis.PyQt.QtGui import (
     QPixmap,
 )
 
+from qgis.core import Qgis, QgsMessageLog
+
 
 from typing import Any
 
@@ -2080,7 +2082,7 @@ class LeftSideIconsDelegate(QStyledItemDelegate):
                         )
                     except:
                         # the value of Qt.ItemDataRole.TextAlignmentRole can be anything, which perhaps can't be converted to Qt.Alignment
-                        pass
+                        QgsMessageLog.logMessage("Qt.ItemDataRole.TextAlignmentRole invalid", "LayerLib", Qgis.MessageLevel.Info)
 
                 pen = painter.pen()
                 pen.setColor(delegate_style.text_color)
