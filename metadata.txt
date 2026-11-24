@@ -1,6 +1,6 @@
 [general]
 name=LayerLib
-version=1.0.1
+version=1.0.0
 category=Plugins
 icon=icons/ll_plugin_icon.svg
 experimental=False
@@ -29,15 +29,14 @@ tracker=https://github.com/Ludwig-K/QGisLayerLib/issues
 repository=https://github.com/Ludwig-K/QGisLayerLib
 
 changelog=
-  <p>1.0.1 (2026-11) first public release
-  - support QGis 4 (PyQT-4)
+  <p>1.0.0 (2026-11) first public release
+  - support QGis 3 (PyQT-5) and QGis 4 (PyQT-6)
   - Store paths absolute or relative
   - find and edit incorrect file paths in registered sources
   - find and edit incorrect file paths inside container-files (*.qgz, *.qgs, *.qlr)
   - bugfixes
   - updated documentation
-  <p>1.0.0 (2026-09) initial release, not published
-  - support QGis 4 (PyQT-4)
+ 
 
 
 
